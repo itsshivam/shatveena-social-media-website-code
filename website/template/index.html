@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shatveena</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/general.css">
+    <link rel="stylesheet" href="/static/css/basic/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/static/css/basic/font-awesome.css"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+
+    <div class="row" style="margin-bottom : 0px; border-top : 1px solid #1e88e5;">
+            <div class="col s12 indexhead">
+                {% if not flag %}
+                    <div class="col s3">
+                        <a href="/"><img src="/static/images/logo.png" width="250px" class="img-responsive user" /></a>
+                    </div>
+                    <div class=" col s3 offset-s4">
+                        <div class="valign-wrapper">
+                            <input id="search" type="text" class="search" placeholder="Search here.....">
+                        </div>
+                    </div>
+                    <div class="col s1">
+                        <p class="center-align " style="margin-top : 15px;"><a class="head" href="login">Log In</a></p>
+                    </div>
+                    <div class="col s1">
+                        <p class="center-align " style="margin-top : 15px;"><a class="head" href="signup">Sign Up</a></p>
+                    </div>
+                {% endif %}
+
+                {% if flag %}
+                    <div class="col s1">
+                        <p class="right-align " style="margin-top : 15px;"><a class="head" href="/profile/account/"><i class="fa fa-user" aria-hidden="true" style="margin-right : 10px;"></i>Profile</a></p>
+                    </div>
+                    <div class="col s2">
+                        <p class="center-align " style="margin-top : 15px;"><a class="head" href=""><i class="fa fa-bell" aria-hidden="true" style="margin-right : 10px;"></i>Notification</a></p>
+                    </div>
+                    <div class="col s1">
+                        <p class="left-align " style="margin-top : 15px;"><a class="head" href=""><i class="fa fa-upload" aria-hidden="true" style="margin-right : 10px;"></i>Upload</a></p>
+                    </div>
+                    <div class=" col s3 offset-s3">
+                        <div class="valign-wrapper">
+                            <input id="search" type="text" class="search" placeholder="Search here for your content.....">
+                        </div>
+                    </div>
+                    <div class="col s1">
+                        <p class="center-align " style="margin-top : 15px;"><a class="head" href="/logout/">Log Out</a></p>
+                    </div>
+                    <div class="col s1">
+                        <p class="center-align " style="margin-top : 15px;"><a class="head" href="/account/">{{username}}</a></p>
+                    </div>
+                {% endif %}
+
+            </div>
+    </div>
+
+    <div class="row col s12" style="margin-bottom : 0px; z-index : 20; border-bottom : 2px solid white; box-shadow : 0px 2px 3px white;">
+        <nav  style="background-color : #8c9eff;">
+            <div class="nav-wrapper">
+                <div class="col s12">
+                    <div class="col s6 offset-s3">
+                        <span class="flow text">
+                            <ul class="hide-on-down">
+                                <li class="navibar"><a id="active1" href="">Home</a></li>
+                                <li class="navibar"><a id="sleep1" href="">Categories</a></li>
+                                <li class="navibar"><a id="sleep1" href="">My Place</a></li>
+                                <li class="navibar"><a id="sleep1" href="">About Us</a></li>
+                                <li><a id="sleep1" href="">Help</a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="col s12 blueline3" style="height : 4px;">
+    </div>
+
+    <div class="s12">
+        <img class="img-responsive banner" src="/static/images/banner.jpg"  alt = "banner" />
+    </div>
+
+    <div class="col s12 blueline2" style="margin-top : -2px; height : 4px;">
+    </div>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+
+</body>
+</html>

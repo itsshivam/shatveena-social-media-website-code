@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shatveena</title>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/general.css">
+    <link rel="stylesheet" href="/static/css/basic/font-awesome.min.css"/>
+	<link rel="stylesheet" href="/static/css/basic/font-awesome.css"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body style="min-height : 100vh;">
+
+    <div class="row col s12" id="loginhead">
+        <div class="col s6 offset-s3">
+            <span class="flow-text">
+                <a href="../"><h1 class="head">Shatveena Welcomes You</h1></a><hr class="linehead">
+                <p class="head">Here we write our tag line.......</p>
+            </span>
+        </div>
+    </div>
+    <div class="row col s8 offset-s2">
+        <div class="col s8 offset-s2 signup"style="padding-top : 10vh; padding-bottom : 15vh; ">
+            <div class="col s10 offset-s1">
+                <div class="row">
+                    <div class="input-field col s8 offset-s2">
+                        <p class="center" style="color : #b388ff;">{{message}}</p>
+                    </div>
+                    <form method="POST" action="/signup/">{% csrf_token %}
+                        <input type="text" value="67862901" name="shatveena1" hidden>
+                        <input type="text" value="{{username}}" name="shatveena2" hidden>
+                        <input type="text" value="{{email}}" name="shatveena3" hidden>
+                        <input type="password" value="{{password}}" name="shatveena4" hidden>
+                        <input type="text" value="{{otp1}}" name="shatveena5" hidden>
+                        <div class="col s12">
+                            <div class="input-field col s6 offset-s3">
+                                <input id="icon_prefix" type="text" class="validate" style="color : #37474f;" name="otp">
+                                <label for="icon_prefix">Enter 6 digit OTP</label>
+                            </div>
+                        </div>
+                        <div class="col s12">
+                            <div class="input-field col s6 offset-s3">
+                                <button class="btn waves-effect waves-light" id="signup"  type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+                            </div>
+                        </div>
+                    </form>
+                    <form method="POST" action="/signup/">{% csrf_token %}
+                        <input type="text" value="44987652" name="shatveena1" hidden>
+                        <input type="text" value="{{username}}" name="shatveena2" hidden>
+                        <input type="text" value="{{email}}" name="shatveena3" hidden>
+                        <input type="password" value="{{password}}" name="shatveena4" hidden>
+                        <div class="input-field col s8 offset-s2">
+                            <p class="center" style="margin-top : 30px; margin-bottom : 20px; padding : 0px;">Please enter 6 digit OTP sent on your email ID. If you don't get, then click on <button type="submit" name="action" id="otp_button">Sent OTP</button> again</p>
+                        </div>
+                    </form>
+                 </div>
+             </div>
+        </div>
+    </div>
+    <div class="col s12" id="footer" style="bottom :0px;">
+        <p class="footer center">&#169; All rights reserved | developed by Shatveena.com</p>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
+</html>
